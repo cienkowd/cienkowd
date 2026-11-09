@@ -40,5 +40,3 @@
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" width="40" height="40"/>
   </a>
 </p>
-
-<p align="center"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=cienkowd&show_icons=true&theme=dark&title_color=ffa200&text_color=ffa200&locale=en&layout=compact" alt="cienkowd" /></p>
