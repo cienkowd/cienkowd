@@ -31,18 +31,17 @@
 <text x="20" y="460" fill="#57606a" xml:space="preserve">:*+=*:=*=+++++*=.+++++++=+++=-=+=:=+==-+-:===---=:</text>
 <text x="20" y="475" fill="#57606a" xml:space="preserve">:*+=+:+++++++++*--+*+++++++=-++=:=+====-:=====-=:-</text>
 <text x="400" y="45" xml:space="preserve"><tspan fill="#0969da">cienkowd@github </tspan><tspan fill="#afb8c1">────────────────────────────────────────</tspan></text>
-<text x="400" y="87" xml:space="preserve"><tspan fill="#953800">OS: </tspan><tspan fill="#afb8c1">..................................... </tspan><tspan fill="#24292f">Windows, Linux</tspan></text>
+<text x="400" y="87" xml:space="preserve"><tspan fill="#953800">OS: </tspan><tspan fill="#afb8c1">..................................... </tspan><tspan fill="#24292f">Windows, macOS</tspan></text>
 <text x="400" y="108" xml:space="preserve"><tspan fill="#953800">Host: </tspan><tspan fill="#afb8c1">............................................ </tspan><tspan fill="#24292f">Xperi</tspan></text>
 <text x="400" y="129" xml:space="preserve"><tspan fill="#953800">Kernel: </tspan><tspan fill="#afb8c1">....................... </tspan><tspan fill="#24292f">Associate Engineer, SDET</tspan></text>
 <text x="400" y="150" xml:space="preserve"><tspan fill="#953800">Uptime: </tspan><tspan fill="#afb8c1">................... </tspan><tspan fill="#24292f">1 year, 4 months in industry</tspan></text>
 <text x="400" y="171" xml:space="preserve"><tspan fill="#953800">IDE: </tspan><tspan fill="#afb8c1">.............. </tspan><tspan fill="#24292f">Claude Code, JetBrains IDEs, VS Code</tspan></text>
-<text x="400" y="213" xml:space="preserve"><tspan fill="#953800">Languages.Programming: </tspan><tspan fill="#afb8c1">. </tspan><tspan fill="#24292f">Python, Java, C/C++, SQL, Julia</tspan></text>
+<text x="400" y="213" xml:space="preserve"><tspan fill="#953800">Languages.Programming: </tspan><tspan fill="#afb8c1">. </tspan><tspan fill="#24292f">Python, TypeScript, Java, C/C++</tspan></text>
 <text x="400" y="234" xml:space="preserve"><tspan fill="#953800">Languages.Real: </tspan><tspan fill="#afb8c1">........................ </tspan><tspan fill="#24292f">Polish, English</tspan></text>
 <text x="400" y="255" xml:space="preserve"><tspan fill="#953800">Education: </tspan><tspan fill="#afb8c1">.......... </tspan><tspan fill="#24292f">Applied CS @ Warsaw Univ. of Tech.</tspan></text>
-<text x="400" y="276" xml:space="preserve"><tspan fill="#953800">Interests: </tspan><tspan fill="#afb8c1">.............. </tspan><tspan fill="#24292f">Test automation, ML, compilers</tspan></text>
-<text x="400" y="297" xml:space="preserve"><tspan fill="#953800">Hobbies: </tspan><tspan fill="#afb8c1">.............. </tspan><tspan fill="#24292f">Running, padel, squash, football</tspan></text>
-<text x="400" y="339" xml:space="preserve"><tspan fill="#0969da">─ GitHub Stats </tspan><tspan fill="#afb8c1">─────────────────────────────────────────</tspan></text>
-<text x="400" y="360" xml:space="preserve"><tspan fill="#953800">Repos: </tspan><tspan fill="#afb8c1">................. </tspan><tspan fill="#24292f">9</tspan><tspan fill="#afb8c1"> | </tspan><tspan fill="#953800">Commits: </tspan><tspan fill="#afb8c1">.............. </tspan><tspan fill="#24292f">108</tspan></text>
-<text x="400" y="381" xml:space="preserve"><tspan fill="#953800">Top languages: </tspan><tspan fill="#afb8c1">. </tspan><tspan fill="#24292f">Java 65%, JavaScript 13%, Python 11%, TSQL 7%</tspan></text>
+<text x="400" y="276" xml:space="preserve"><tspan fill="#953800">Hobbies: </tspan><tspan fill="#afb8c1">.................... </tspan><tspan fill="#24292f">Running, football, finance</tspan></text>
+<text x="400" y="318" xml:space="preserve"><tspan fill="#953800">Work account: </tspan><tspan fill="#afb8c1">................... </tspan><tspan fill="#24292f">github.com/dcienkowski</tspan></text>
+<text x="400" y="360" xml:space="preserve"><tspan fill="#0969da">─ GitHub Stats </tspan><tspan fill="#afb8c1">─────────────────────────────────────────</tspan></text>
+<text x="400" y="381" xml:space="preserve"><tspan fill="#953800">Repos: </tspan><tspan fill="#afb8c1">................. </tspan><tspan fill="#24292f">9</tspan><tspan fill="#afb8c1"> | </tspan><tspan fill="#953800">Commits: </tspan><tspan fill="#afb8c1">.............. </tspan><tspan fill="#24292f">111</tspan></text>
 <text x="400" y="402" xml:space="preserve"><tspan fill="#953800">Lines of Code: </tspan><tspan fill="#24292f">120,154</tspan><tspan fill="#afb8c1"> ( </tspan><tspan fill="#1a7f37">367,025++</tspan><tspan fill="#afb8c1">, </tspan><tspan fill="#cf222e">246,871--</tspan><tspan fill="#afb8c1"> )</tspan></text>
 </svg>
