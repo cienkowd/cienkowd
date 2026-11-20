@@ -13,6 +13,8 @@ from datetime import date, datetime, timezone
 USER = "cienkowd"
 BIRTHDAY = date(2003, 5, 29)
 JOINED_YEAR = 2023                # GitHub account creation year
+WORK_USER = "dcienkowski"         # work account, private repos only
+WORK_JOINED_YEAR = 2025
 W = 56                            # info column width in characters
 
 ART = r"""
@@ -102,14 +104,25 @@ def plural(n, word):
     return f"{n} {word}{'' if n == 1 else 's'}"
 
 
-def fetch_stats():
+def count_commits(login, joined_year):
+    # restrictedContributionsCount = private contributions, visible only if the account
+    # has "Include private contributions on my profile" enabled
     years = "\n".join(
         f'y{y}: contributionsCollection(from: "{y}-01-01T00:00:00Z", to: "{y + 1}-01-01T00:00:00Z")'
         " { totalCommitContributions restrictedContributionsCount }"
-        for y in range(JOINED_YEAR, datetime.now(timezone.utc).year + 1)
+        for y in range(joined_year, datetime.now(timezone.utc).year + 1)
     )
-    contrib = graphql(f'query {{ user(login: "{USER}") {{ {years} }} }}')["user"]
-    commits = sum(v["totalCommitContributions"] + v["restrictedContributionsCount"] for v in contrib.values())
+    contrib = graphql(f'query {{ user(login: "{login}") {{ {years} }} }}')["user"]
+    return sum(v["totalCommitContributions"] + v["restrictedContributionsCount"] for v in contrib.values())
+
+
+def fetch_stats():
+    commits = count_commits(USER, JOINED_YEAR)
+    try:
+        work_commits = count_commits(WORK_USER, WORK_JOINED_YEAR)
+    except Exception as e:
+        print(f"work account: {e}")
+        work_commits = 0
 
     u = graphql(f"""
     query {{
@@ -124,7 +137,7 @@ def fetch_stats():
     }}""")["user"]
     repos = [n for n in u["repositories"]["nodes"] if n["name"] != USER]
 
-    stats = {"repos": len(repos), "commits": commits}
+    stats = {"repos": len(repos), "commits": commits, "work_commits": work_commits}
     stats.update(loc([r["name"] for r in repos], u["id"]))
     return stats
 
@@ -201,6 +214,7 @@ def info_lines(s):
         [],
         rule("GitHub Stats"),
         kv2("Repos", s["repos"], "Commits", n(s["commits"])),
+    ] + ([kv("Work contributions (private)", n(s["work_commits"]))] if s.get("work_commits") else []) + [
         [("Lines of Code: ", "k"), (n(s["loc"]), "v"), (" ( ", "d"),
          (n(s["loc_add"]) + "++", "g"), (", ", "d"), (n(s["loc_del"]) + "--", "r"), (" )", "d")],
     ]
