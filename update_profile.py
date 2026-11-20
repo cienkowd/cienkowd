@@ -50,24 +50,22 @@ ART = r"""
 """
 
 PROFILE = [
-    ("OS", "Windows, Linux"),
+    ("OS", "Windows, macOS"),
     ("Host", "Xperi"),
     ("Kernel", "Associate Engineer, SDET"),
     ("Uptime", None),  # filled with time since CAREER_START
     ("IDE", "Claude Code, JetBrains IDEs, VS Code"),
     None,
-    ("Languages.Programming", "Python, Java, C/C++, SQL, Julia"),
+    ("Languages.Programming", "Python, TypeScript, Java, C/C++"),
     ("Languages.Real", "Polish, English"),
     ("Education", "Applied CS @ Warsaw Univ. of Tech."),
-    ("Interests", "Test automation, ML, compilers"),
-    ("Hobbies", "Running, padel, squash, football"),
+    ("Hobbies", "Running, football, finance"),
+    None,
+    ("Work account", "github.com/dcienkowski"),
 ]
 
 # Shown only when non-empty, e.g. [("LinkedIn", "in/your-handle"), ("Email", "you@example.com")]
 CONTACT = []
-
-# markup, build files and notebooks would drown out the actual code
-IGNORED_LANGUAGES = {"HTML", "CSS", "Jupyter Notebook", "Makefile", "Dockerfile", "Mako"}
 
 TOKEN = os.environ.get("ACCESS_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
 
@@ -120,24 +118,13 @@ def fetch_stats():
         repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false) {{
           nodes {{
             name
-            languages(first: 20) {{ edges {{ size node {{ name }} }} }}
           }}
         }}
       }}
     }}""")["user"]
     repos = [n for n in u["repositories"]["nodes"] if n["name"] != USER]
 
-    lang_bytes = {}
-    for r in repos:
-        for e in r["languages"]["edges"]:
-            if e["node"]["name"] in IGNORED_LANGUAGES:
-                continue
-            lang_bytes[e["node"]["name"]] = lang_bytes.get(e["node"]["name"], 0) + e["size"]
-    total = sum(lang_bytes.values()) or 1
-    top = sorted(lang_bytes.items(), key=lambda kv: -kv[1])[:4]
-    languages = ", ".join(f"{name} {round(100 * size / total)}%" for name, size in top)
-
-    stats = {"repos": len(repos), "commits": commits, "languages": languages}
+    stats = {"repos": len(repos), "commits": commits}
     stats.update(loc([r["name"] for r in repos], u["id"]))
     return stats
 
@@ -214,7 +201,6 @@ def info_lines(s):
         [],
         rule("GitHub Stats"),
         kv2("Repos", s["repos"], "Commits", n(s["commits"])),
-        kv("Top languages", s["languages"]),
         [("Lines of Code: ", "k"), (n(s["loc"]), "v"), (" ( ", "d"),
          (n(s["loc_add"]) + "++", "g"), (", ", "d"), (n(s["loc_del"]) + "--", "r"), (" )", "d")],
     ]
