@@ -11,7 +11,7 @@ import urllib.request
 from datetime import date, datetime, timezone
 
 USER = "cienkowd"
-CAREER_START = date(2025, 7, 1)  # first day at Xperi
+BIRTHDAY = date(2003, 5, 29)
 JOINED_YEAR = 2023                # GitHub account creation year
 W = 56                            # info column width in characters
 
@@ -53,7 +53,7 @@ PROFILE = [
     ("OS", "Windows, macOS"),
     ("Host", "Xperi"),
     ("Kernel", "Associate Engineer, SDET"),
-    ("Uptime", None),  # filled with time since CAREER_START
+    ("Uptime", None),  # filled with age from BIRTHDAY
     ("IDE", "Claude Code, JetBrains IDEs, VS Code"),
     None,
     ("Languages.Programming", "Python, TypeScript, Java, C/C++"),
@@ -185,8 +185,8 @@ def rule(title=""):
 
 
 def info_lines(s):
-    y, m, _ = duration(CAREER_START, date.today())
-    uptime = f"{plural(y, 'year')}, {plural(m, 'month')} in industry" if y else f"{plural(m, 'month')} in industry"
+    y, m, d = duration(BIRTHDAY, date.today())
+    uptime = f"{plural(y, 'year')}, {plural(m, 'month')}, {plural(d, 'day')}"
     n = lambda x: f"{x:,}"
     lines = [[(f"{USER}@github ", "h"), ("─" * (W - len(USER) - 8), "d")], []]
     for item in PROFILE:
@@ -229,8 +229,9 @@ def render(mode, stats):
 
 
 def selfcheck():
-    assert duration(date(2025, 7, 1), date(2026, 11, 20)) == (1, 4, 19)
-    assert duration(date(2025, 7, 1), date(2025, 12, 1)) == (0, 5, 0)
+    assert duration(date(2003, 5, 29), date(2026, 11, 20)) == (23, 5, 22)
+    assert duration(date(2003, 5, 29), date(2026, 5, 29)) == (23, 0, 0)
+    assert duration(date(2000, 3, 31), date(2026, 4, 1)) == (26, 0, 1)
     assert len("".join(t for t, _ in kv("OS", "Windows, Linux"))) == W
     assert len("".join(t for t, _ in kv2("Repos", 9, "Commits", "1,234"))) == W
 
