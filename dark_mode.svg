@@ -34,7 +34,7 @@
 <text x="400" y="87" xml:space="preserve"><tspan fill="#ffa657">OS: </tspan><tspan fill="#484f58">..................................... </tspan><tspan fill="#c9d1d9">Windows, macOS</tspan></text>
 <text x="400" y="108" xml:space="preserve"><tspan fill="#ffa657">Host: </tspan><tspan fill="#484f58">............................................ </tspan><tspan fill="#c9d1d9">Xperi</tspan></text>
 <text x="400" y="129" xml:space="preserve"><tspan fill="#ffa657">Kernel: </tspan><tspan fill="#484f58">....................... </tspan><tspan fill="#c9d1d9">Associate Engineer, SDET</tspan></text>
-<text x="400" y="150" xml:space="preserve"><tspan fill="#ffa657">Uptime: </tspan><tspan fill="#484f58">.................... </tspan><tspan fill="#c9d1d9">23 years, 5 months, 26 days</tspan></text>
+<text x="400" y="150" xml:space="preserve"><tspan fill="#ffa657">Uptime: </tspan><tspan fill="#484f58">.................... </tspan><tspan fill="#c9d1d9">23 years, 5 months, 27 days</tspan></text>
 <text x="400" y="171" xml:space="preserve"><tspan fill="#ffa657">IDE: </tspan><tspan fill="#484f58">.............. </tspan><tspan fill="#c9d1d9">Claude Code, JetBrains IDEs, VS Code</tspan></text>
 <text x="400" y="213" xml:space="preserve"><tspan fill="#ffa657">Languages.Programming: </tspan><tspan fill="#484f58">. </tspan><tspan fill="#c9d1d9">Python, TypeScript, Java, C/C++</tspan></text>
 <text x="400" y="234" xml:space="preserve"><tspan fill="#ffa657">Languages.Real: </tspan><tspan fill="#484f58">........................ </tspan><tspan fill="#c9d1d9">Polish, English</tspan></text>
@@ -43,6 +43,6 @@
 <text x="400" y="318" xml:space="preserve"><tspan fill="#ffa657">Work account: </tspan><tspan fill="#484f58">................... </tspan><tspan fill="#c9d1d9">github.com/dcienkowski</tspan></text>
 <text x="400" y="360" xml:space="preserve"><tspan fill="#58a6ff">─ GitHub Stats </tspan><tspan fill="#484f58">─────────────────────────────────────────</tspan></text>
 <text x="400" y="381" xml:space="preserve"><tspan fill="#ffa657">Repos: </tspan><tspan fill="#484f58">................ </tspan><tspan fill="#c9d1d9">15</tspan><tspan fill="#484f58"> | </tspan><tspan fill="#ffa657">Commits: </tspan><tspan fill="#484f58">.............. </tspan><tspan fill="#c9d1d9">126</tspan></text>
-<text x="400" y="402" xml:space="preserve"><tspan fill="#ffa657">Work contributions (private): </tspan><tspan fill="#484f58">...................... </tspan><tspan fill="#c9d1d9">444</tspan></text>
+<text x="400" y="402" xml:space="preserve"><tspan fill="#ffa657">Work contributions (private): </tspan><tspan fill="#484f58">...................... </tspan><tspan fill="#c9d1d9">446</tspan></text>
 <text x="400" y="423" xml:space="preserve"><tspan fill="#ffa657">Lines of Code: </tspan><tspan fill="#c9d1d9">177,905</tspan><tspan fill="#484f58"> ( </tspan><tspan fill="#3fb950">425,907++</tspan><tspan fill="#484f58">, </tspan><tspan fill="#f85149">248,002--</tspan><tspan fill="#484f58"> )</tspan></text>
 </svg>
